@@ -1,8 +1,10 @@
+import './style.css';
+
 function FruitList({ fruits }) {
   return (
-    <ul>
-      {fruits.map((fruit) => (
-        <li>{fruit.name}</li>
+    <ul className="fruitsList">
+      {fruits.map((fruit, index) => (
+        <li key={index}>{fruit.name}</li>
       ))}
     </ul>
   );

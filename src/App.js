@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import FruitList from './Components/FruitList';
+import { GiPriceTag } from 'react-icons/gi';
 
 function App() {
   const [fruits, setFruits] = useState([
@@ -25,9 +26,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {totalPrice}
+        <div>
+          <GiPriceTag />
+          {totalPrice}
+        </div>
         <FruitList fruits={fruits} />
-        <button onClick={handleFruits}>Red Fruits Only</button>
+        <button className="priceButton" onClick={handleFruits}>
+          Red Fruits Only
+        </button>
       </header>
     </div>
   );
